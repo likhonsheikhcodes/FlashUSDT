@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Flash USDT Sender - Fast & Secure Crypto Transactions</title>
+    <meta name="title" content="Flash USDT Sender - Fast & Secure Crypto Transactions">
+    <meta name="description" content="Send USDT instantly with Flash USDT Sender. Secure, fast, and reliable cryptocurrency transactions with real-time tracking and minimal fees.">
+    <meta name="keywords" content="Flash USDT, crypto sender, USDT transfer, cryptocurrency, blockchain, secure payments, instant transfer, crypto wallet, digital currency, ethereum, blockchain technology">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://recentcoders.github.io/FlashUSDT/">
+    <meta property="og:title" content="Flash USDT Sender - Fast & Secure Crypto Transactions">
+    <meta property="og:description" content="Send USDT instantly with Flash USDT Sender. Secure, fast, and reliable cryptocurrency transactions with real-time tracking and minimal fees.">
+    <meta property="og:image" content="https://recentcoders.github.io/FlashUSDT/preview.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://recentcoders.github.io/FlashUSDT/">
+    <meta property="twitter:title" content="Flash USDT Sender - Fast & Secure Crypto Transactions">
+    <meta property="twitter:description" content="Send USDT instantly with Flash USDT Sender. Secure, fast, and reliable cryptocurrency transactions with real-time tracking and minimal fees.">
+    <meta property="twitter:image" content="https://recentcoders.github.io/FlashUSDT/preview.jpg">
+
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #00dc82;
+            --primary-dark: #00b368;
+            --background: #0a0a0a;
+            --foreground: #ffffff;
+            --card: #1a1a1a;
+            --border: #2a2a2a;
+            --muted: #666666;
+            --accent: #2dd4bf;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--foreground);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 1rem 2rem;
+            background: radial-gradient(circle at center, #1a1a1a 0%, var(--background) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--primary) 0%, transparent 100%);
+            opacity: 0.05;
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            max-width: 800px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero-description {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--muted);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Transaction Feed */
+        .transactions {
+            padding: 4rem 1rem;
+            background: var(--card);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+
+        .transactions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .transaction-card {
+            background: var(--background);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: transform 0.2s;
+            animation: fadeIn 0.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        .transaction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        @keyframes fadeIn {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Partners Section */
+        .partners {
+            padding: 4rem 1rem;
+            background: var(--background);
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .partner-logo {
+            max-width: 180px;
+            height: auto;
+            filter: grayscale(1) brightness(0.8);
+            transition: all 0.3s ease;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .partner-logo:hover {
+            filter: grayscale(0) brightness(1);
+            transform: translateY(-5px);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 4rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            color: var(--muted);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.875rem 1.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--background);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 220, 130, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--background);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding-top: 4rem;
+            }
+            
+            .transactions-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .mt-2 { margin-top: 2rem; }
+        .mb-2 { margin-bottom: 2rem; }
+        .text-center { text-align: center; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav-brand">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+                FlashUSDT
+            </a>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#transactions" class="nav-link">Transactions</a>
+                <a href="#partners" class="nav-link">Partners</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Send USDT Instantly & Securely</h1>
+                <p class="hero-description">
+                    Experience lightning-fast USDT transfers with real-time tracking and minimal fees. 
+                    Trusted by thousands of users worldwide.
+                </p>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="atlosDonate.Donate({
+                        merchantId: 'VJ30UOFJMO',
+                        theme: 'dark'
+                    })">
+                        Send USDT Now
+                    </button>
+                    <button class="btn btn-secondary" onclick="atlos.Pay({
+                        merchantId: 'VJ30UOFJMO',
+                        orderId: '1',
+                        orderAmount: 50
+                    })">
+                        Quick Transfer
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="transactions" class="transactions">
+            <h2 class="section-title">Live Transactions</h2>
+            <div class="transactions-grid" id="txn-feed">
+                <!-- Dynamic transaction cards will be inserted here -->
+            </div>
+        </section>
+
+        <section id="partners" class="partners">
+            <h2 class="section-title">Trusted Partners</h2>
+            <div class="partners-grid">
+                <img src="https://atlos.io/img/index/logo-alchemy.svg" alt="Alchemy" class="partner-logo">
+                <img src="https://atlos.io/img/common/logo-footer.svg" alt="Atlos" class="partner-logo">
+                <img src="https://atlos.io/img/index/integration-whmcs.png" alt="WHMCS" class="partner-logo">
+                <img src="https://atlos.io/img/index/logo-coinmarketcap.svg" alt="CoinMarketCap" class="partner-logo">
+            </div>
+        </section>
+
+        <section id="faq" class="faq">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">What is FlashUSDT?</div>
+                <div class="faq-answer">
+                    FlashUSDT is a secure and fast platform for sending USDT across the blockchain network. 
+                    We provide instant transfers with real-time tracking capabilities.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How fast are the transactions?</div>
+                <div class="faq-answer">
+                    Transactions are processed instantly and typically confirm within minutes, 
+                    depending on network conditions.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Is FlashUSDT secure?</div>
+                <div class="faq-answer">
+                    Yes, we implement industry-standard security measures and partner with trusted providers 
+                    like Alchemy to ensure maximum security for all transactions.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What are the fees?</div>
+                <div class="faq-answer">
+                    Our fees are competitive and transparent. You only pay the network gas fees plus a small 
+                    service fee. The exact amount will be shown before you confirm any transaction.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Which networks are supported?</div>
+                <div class="faq-answer">
+                    We currently support USDT transfers on multiple networks including Ethereum, 
+                    Binance Smart Chain, and Polygon.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script async src="https://atlos.io/packages/donate/donate.js"></script>
+    <script async src="https://atlos.io/packages/app/atlos.js"></script>
+    
+    <script>
+        // Etherscan API Integration
+        const ETHERSCAN_API_KEY = 'MM2A4V75UZ2DSWR28EUM5EEVR8IB4Y1UMC';
+        
+        async function fetchTransactions() {
+            try {
+                const response = await fetch(`https://api.etherscan.io/api?module=account&action=txlist&address=0xBFD25B75E9a742cEC6ea68D06d631f6EF14Cfa82&startblock=0&endblock=99999999&sort=desc&apikey=${ETHERSCAN_API_KEY}`);
+                const data = await response.json();
+                
+                if (data.status === '1' && data.result) {
+                    const txnFeed = document.getElementById('txn-feed');
+                    txnFeed.innerHTML = ''; // Clear existing transactions
+                    
+                    data.result
+                        .filter(tx => parseInt(tx.value) >= 10e18) // Filter transactions >= 10 ETH
+                        .slice(0, 6)
+                        .forEach((tx, index) => {
+                            const amount = (parseInt(tx.value) / 1e18).toFixed(2);
+                            const card = document.createElement('div');
+                            card.className = 'transaction-card';
+                            card.style.animationDelay = `${index * 0.1}s`;
+                            
+                            card.innerHTML = `
+                                <div style="font-size: 1.25rem; color: var(--primary); margin-bottom: 0.5rem;">
+                                    ${amount} ETH
+                                </div>
+                                <div style="color: var(--muted);">
+                                    From: ${tx.from.slice(0, 6)}...${tx.from.slice(-4)}
+                                </div>
+                                <div style="color: var(--muted);">
+                                    To: ${tx.to.slice(0, 6)}...${tx.to.slice(-4)}
+                                </div>
+                                <div style="color: var(--muted); font-size: 0.875rem; margin-top: 0.5rem;">
+                                    ${new Date(tx.timeStamp * 1000).toLocaleString()}
+                                </div>
+                            `;
+                            
+                            txnFeed.appendChild(card);
+                        });
+                }
+            } catch (error) {
+                console.error('Error fetching transactions:', error);
+            }
+        }
+
+        // Initial fetch and periodic updates
+        fetchTransactions();
+        setInterval(fetchTransactions, 30000); // Update every 30 seconds
+    </script>
+</body>
+</html>
