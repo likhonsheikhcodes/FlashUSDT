@@ -882,6 +882,130 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="faq-popup-content" id="faq-popup-content"></div>
         </div>
     </main>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="nav-brand">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                    FlashUSDT
+                </a>
+                <p class="footer-description">Experience lightning-fast USDT transfers with real-time tracking and minimal fees.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#features" class="footer-link">Features</a>
+                <a href="#transactions" class="footer-link">Transactions</a>
+                <a href="#partners" class="footer-link">Partners</a>
+                <a href="#faq" class="footer-link">FAQ</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://t.me/RecentCoders" target="_blank" class="social-link">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <!-- Add more social media links here if needed -->
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 FlashUSDT. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .footer {
+        background: var(--background);
+        color: var(--foreground);
+        padding: 2rem 1rem;
+        border-top: 1px solid var(--border);
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-brand {
+        margin-bottom: 1rem;
+    }
+
+    .footer-brand .nav-brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .footer-description {
+        font-size: 1rem;
+        color: var(--muted);
+        margin-top: 0.5rem;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-link {
+        color: var(--foreground);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+    }
+
+    .footer-link:hover {
+        color: var(--primary);
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .social-link {
+        color: var(--foreground);
+        font-size: 1.5rem;
+        transition: color 0.2s;
+    }
+
+    .social-link:hover {
+        color: var(--primary);
+    }
+
+    .footer-bottom {
+        margin-top: 1rem;
+        font-size: 0.875rem;
+        color: var(--muted);
+    }
+
+    @media (max-width: 768px) {
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-links {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-social {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQJK4ZLT"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
